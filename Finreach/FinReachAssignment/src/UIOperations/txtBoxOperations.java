@@ -1,0 +1,24 @@
+package UIOperations;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+
+//import LibraryFunctions.LoginFunctions;
+
+public class txtBoxOperations 
+{
+	public static void enterText (WebElement obj,String usrName)
+	{
+		
+		obj.sendKeys(usrName);
+		
+	}
+	
+	public static void clickButton(WebElement obj)
+	{
+		obj.click();
+	}
+	
+}
+

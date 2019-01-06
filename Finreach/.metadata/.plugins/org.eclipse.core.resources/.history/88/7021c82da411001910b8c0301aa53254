@@ -1,0 +1,9 @@
+package UIOperations;
+class txtBoxOperations
+{
+	public static void enterText()
+	{
+		
+	}
+}
+

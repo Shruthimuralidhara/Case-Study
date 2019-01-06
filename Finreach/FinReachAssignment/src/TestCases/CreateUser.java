@@ -1,0 +1,43 @@
+package TestCases;
+
+import java.util.concurrent.TimeUnit;
+
+import org.openqa.selenium.By;
+
+import org.openqa.selenium.chrome.ChromeDriver;
+
+public class CreateUser {
+
+	public static void main(String[] args) {
+		System.setProperty("webdriver.chrome.driver", 
+	               "C:\\eclipse\\DriversDownloaded\\chromedriver.exe");
+		ChromeDriver driver = new ChromeDriver();
+		driver.get("https://cafetownsend-angular-rails.herokuapp.com/login");
+		
+		driver.manage().timeouts().implicitlyWait(2, TimeUnit.SECONDS);
+		
+		//Enter username
+		 driver.findElement(By.xpath("//*[@id=\"login-form\"]/fieldset/label[1]/input")).sendKeys("Luke");
+
+		//Enter password
+	    driver.findElement(By.xpath("//*[@id=\"login-form\"]/fieldset/label[2]/input")).sendKeys("Skywalker");
+
+				
+		//Click on LoginButton
+		driver.findElement(By.xpath("//*[@id=\"login-form\"]/fieldset/button")).click();
+		driver.manage().window().maximize();
+
+		//Create a new user
+		driver.findElement(By.xpath("//*[@id=\"bAdd\"]")).click();
+		driver.manage().timeouts().implicitlyWait(2, TimeUnit.SECONDS);
+		driver.findElement(By.xpath("/html/body/div/div/div/form/fieldset/label[1]/input")).sendKeys("Shruthi");
+		driver.findElement(By.xpath("/html/body/div/div/div/form/fieldset/label[2]/input")).sendKeys("Muralidhara");
+		driver.findElement(By.xpath("/html/body/div/div/div/form/fieldset/label[3]/input")).sendKeys("2019-01-06");
+		driver.findElement(By.xpath("/html/body/div/div/div/form/fieldset/label[4]/input")).sendKeys("Shruthimuralidhara91@gmail.com");
+		driver.findElement(By.xpath("/html/body/div/div/div/form/fieldset/div/button[2]")).click();
+		
+		
+		
+	}
+
+}

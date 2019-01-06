@@ -1,0 +1,24 @@
+package TestCases;
+
+import LibraryFunctions.LoginFunctions;
+
+public class TestCase01 extends LoginFunctions{
+
+	public static void main(String[] args) {
+		
+		//Navigate to the website
+		if (LoginFunctions.navigateLink())
+		{
+			System.out.println("Login to cafeTownSend Website successful");
+		}
+		else
+		{
+			System.out.println("Login to cafeTownSend Website unsuccessful");
+		}
+		
+		
+		
+
+	}
+
+}

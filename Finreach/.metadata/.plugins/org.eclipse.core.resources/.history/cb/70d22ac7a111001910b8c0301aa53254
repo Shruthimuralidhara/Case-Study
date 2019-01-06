@@ -1,0 +1,13 @@
+package TestCases;
+
+import LibraryFunctions.LoginFunctions;
+
+public class TestCase01 extends LoginFunctions{
+
+	public static void main(String[] args) {
+		LoginFunctions l = new LoginFunctions();
+		l.navigateLink();
+
+	}
+
+}

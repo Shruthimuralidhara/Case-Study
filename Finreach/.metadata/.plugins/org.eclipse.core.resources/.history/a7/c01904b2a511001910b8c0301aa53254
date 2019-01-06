@@ -1,0 +1,20 @@
+package UIOperations;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+
+//import LibraryFunctions.LoginFunctions;
+
+public class txtBoxOperations 
+{
+	public static void enterText(WebDriver driver,String nameProp)
+	{
+		WebElement obj = driver.findElement(By.ByXPath("*[@id="login-form"]"));
+		boolean flag = obj.isDisplayed();
+		System.out.println(flag);
+		//*[@id="login-form"]/fieldset/label[1]/input
+		
+	}
+}
+

@@ -1,0 +1,39 @@
+package LibraryFunctions;
+
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+import UIOperations.txtBoxOperations;
+
+public class LoginFunctions extends txtBoxOperations{
+	
+	//static WebDriver driver;
+	String nameProp;
+	
+	public static void setDriver(WebDriver driver)
+	{
+		System.setProperty("webdriver.chrome.driver", 
+	               "C:\\eclipse\\DriversDownloaded\\chromedriver.exe");
+		driver=new ChromeDriver();
+		
+		
+	}
+	
+	public static boolean navigateLink(WebDriver driver)
+	{
+		setDriver(driver);
+		driver.get("https://cafetownsend-angular-rails.herokuapp.com/login");
+		String actTitle = driver.getTitle();
+		System.out.println(actTitle);
+		if (actTitle.equalsIgnoreCase("CafeTownsend-AngularJS-Rails"))
+		{
+			driver.manage().window().maximize();
+			return true; 
+		}
+		
+		return false; 
+	}
+	
+	
+	
+
+}

@@ -1,0 +1,19 @@
+package UIOperations;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+
+//import LibraryFunctions.LoginFunctions;
+
+public class txtBoxOperations 
+{
+	public static void enterText(WebDriver driver,String elexpath)
+	{
+		WebElement obj = driver.findElement(By.xpath(elexpath));
+		boolean flag = obj.isDisplayed();
+		System.out.println(flag);
+		
+	}
+}
+
