@@ -1,0 +1,13 @@
+LOG ANALYSIS:
+
+
+
+1. 07:27:57.633 [main] INFO  o.s.i.endpoint.EventDrivenConsumer started _org.springframework.integration.errorLogger
+{"error": {"code": 40001, "data": {}, "description": "Bank unknown", "group": "figo", "message": "This bank code is unknown to us, or doesn't operate in this country.", "name": "Not Found"}, "status": 404}
+ERROR c.f.figo.gateway.FigoErrorHandler An error occurred while communicating with Figo, reason: FigoError{code=40001, description='Bank unknown', group='figo', message='This bank code is unknown to us, or doesn't operate in this country.', name='Not Found'}
+
+
+
+2. ERROR o.s.i.handler.LoggingHandler org.springframework.web.client.HttpClientErrorException: 401 Unauthorized
+
+
